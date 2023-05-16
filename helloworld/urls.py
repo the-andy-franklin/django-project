@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from hello.views import hello_world
+from .views import hello_world, random_quote
 
 urlpatterns = [
-    path('', hello_world, name='hello_world'),
+    path('', random_quote),
+    path('hello-world/', hello_world, name='hello_world'),
     path('admin/', admin.site.urls),
 ]
