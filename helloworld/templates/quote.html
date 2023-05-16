@@ -1,0 +1,21 @@
+{% load static %}
+{% load json_utils %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Quote</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="quote">
+            <h1>Random Quote</h1>
+            <p id="quote-text">{{ content }}</p>
+            <p id="author-text">- {{ author }}</p>
+            <button id="new-quote-button" class="button">Get New Quote</button>
+        </div>
+    </div>
+</body>
+</html>
